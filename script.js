@@ -29,15 +29,15 @@ function showTodo(filter) {
                             <div class="settings">
                                 <i onclick="showMenu(this)" class="uil uil-ellipsis-h"></i>
                                 <ul class="task-menu">
-                                    <li onclick='editTask(${id}, "${todo.name}")'><i class="uil uil-pen"></i>Edit</li>
-                                    <li onclick='deleteTask(${id}, "${filter}")'><i class="uil uil-trash"></i>Delete</li>
+                                    <li onclick='editTask(${id}, "${todo.name}")'><i class="uil uil-pen"></i>ویرایش</li>
+                                    <li onclick='deleteTask(${id}, "${filter}")'><i class="uil uil-trash"></i>حذف</li>
                                 </ul>
                             </div>
                         </li>`;
             }
         });
     }
-    taskBox.innerHTML = liTag || `<span>You don't have any task here</span>`;
+    taskBox.innerHTML = liTag || `<span>شما هیچ تسکی ندارید!</span>`;
     let checkTask = taskBox.querySelectorAll(".task");
     !checkTask.length ? clearAll.classList.remove("active") : clearAll.classList.add("active");
     taskBox.offsetHeight >= 300 ? taskBox.classList.add("overflow") : taskBox.classList.remove("overflow");
